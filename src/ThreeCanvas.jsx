@@ -88,7 +88,18 @@ function DataBrain() {
 export default function ThreeCanvas() {
   return (
     <div className="canvas-container">
-      <Canvas dpr={[1, 2]} shadows>
+      <Canvas 
+        dpr={[1, 2]} 
+        gl={{ 
+          antialias: true, 
+          alpha: true, 
+          powerPreference: 'high-performance',
+          stencil: false,
+          depth: true,
+          precision: 'highp'
+        }}
+        camera={{ position: [0, 0, 16], fov: 35 }}
+      >
         <PerspectiveCamera makeDefault position={[0, 0, 16]} fov={35} />
         <OrbitControls enableZoom={false} enablePan={false} />
         <ambientLight intensity={0.5} />
