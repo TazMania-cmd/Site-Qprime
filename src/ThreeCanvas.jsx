@@ -68,7 +68,7 @@ function DataBrain() {
 
       {/* Connecting Neural Lines */}
       <mesh rotation={[Math.PI / 2, 0, 0]}>
-        <sphereGeometry args={[5, 32, 32]} />
+        <sphereGeometry args={[5, 20, 20]} />
         <meshBasicMaterial color="#00e5ff" wireframe={true} transparent opacity={0.05} />
       </mesh>
 

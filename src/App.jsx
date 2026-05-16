@@ -64,25 +64,36 @@ function App() {
             <div className="c-black"></div>
           </div>
 
-          <motion.div
-            className="hero-content glass"
-            initial="hidden"
-            animate="visible"
-            variants={staggerContainer}
-          >
-            <motion.h1 variants={fadeInUp}>
-              IMPRESSÃO INTELIGENTE,<br />
-              <span className="text-gradient">RESULTADO VISÍVEL</span>
-            </motion.h1>
-            <motion.p variants={fadeInUp}>
-              Muito além de equipamentos. A QPRIME entrega performance, economia e tranquilidade operacional com soluções completas em outsourcing de impressão, manutenção e suprimentos personalizados para o seu negócio.
-            </motion.p>
-            <motion.div className="hero-actions" variants={fadeInUp}>
-              <a href="https://wa.me/5562982480001" target="_blank" rel="noreferrer">
-                <button className="btn-primary large">FALAR COM UM ESPECIALISTA</button>
-              </a>
+          <div className="hero-container">
+            <motion.div
+              className="hero-content glass"
+              initial="hidden"
+              animate="visible"
+              variants={staggerContainer}
+            >
+              <motion.h1 variants={fadeInUp}>
+                IMPRESSÃO INTELIGENTE,<br />
+                <span className="text-gradient">RESULTADO VISÍVEL</span>
+              </motion.h1>
+              <motion.p variants={fadeInUp}>
+                Muito além de equipamentos. A QPRIME entrega performance, economia e tranquilidade operacional com soluções completas em outsourcing de impressão, manutenção e suprimentos personalizados para o seu negócio.
+              </motion.p>
+              <motion.div className="hero-actions" variants={fadeInUp}>
+                <a href="https://wa.me/5562982480001" target="_blank" rel="noreferrer">
+                  <button className="btn-primary large">FALAR COM UM ESPECIALISTA</button>
+                </a>
+              </motion.div>
             </motion.div>
-          </motion.div>
+
+            <motion.div 
+              className="hero-3d"
+              initial={{ opacity: 0, scale: 0.8 }}
+              animate={{ opacity: 1, scale: 1 }}
+              transition={{ duration: 1.2, delay: 0.5 }}
+            >
+              <ThreeCanvas />
+            </motion.div>
+          </div>
         </section>
 
         {/* Quem Somos Section */}
@@ -101,19 +112,23 @@ function App() {
             <motion.p variants={fadeInUp}>
               Nossa tecnologia de outsourcing e gestão documental coloca sua empresa no controle total dos processos de impressão. Ganhe eficiência, previsibilidade e redução de desperdício.
             </motion.p>
+            <div className="glass-box" style={{ marginTop: '30px' }}>
+              <h3>Tecnologia de Ponta</h3>
+              <p style={{ color: "var(--color-text-muted)" }}>Equipamentos operando com manutenção proativa e redução de desperdício.</p>
+            </div>
           </motion.div>
 
           <motion.div
-            className="split-image"
+            className="split-image-decorative"
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8 }}
             viewport={{ once: true }}
           >
-            <ThreeCanvas />
-            <div className="glass-box">
-              <h3>Tecnologia de Ponta</h3>
-              <p style={{ color: "var(--color-text-muted)" }}>Equipamentos operando com manutenção proativa e redução de desperdício.</p>
+            {/* Espaço para imagem ou gráfico secundário se necessário */}
+            <div className="registration-graphic">
+              <div className="circle-main"></div>
+              <div className="circle-inner"></div>
             </div>
           </motion.div>
         </section>
